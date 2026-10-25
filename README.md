@@ -34,34 +34,9 @@ Project A.R.C. (Autonomous Robotic Cleaner) is an autonomous linear traversing m
 
 Operating along dual 2020 V-slot aluminum guide rails via a custom 3-wheel pinching gantry carriage, the robot combines high-contact mechanical shear using an 800 GSM plush microfiber roller drum with non-contact pneumatic dust mitigation. The platform restores optical transmission and panel power output without requiring water consumption.
 
-```mermaid
-flowchart TD
-    subgraph Stage ["Physical Cleaning Stage"]
-        PANEL["Photovoltaic Panel / Testbed<br/><b>Datum: Z = 0.00 mm</b>"]
-        ROLLER["Microfiber Cleaning Drum<br/><b>800 GSM Plush Sleeve</b>"]
-        GANTRY["3-Wheel Motion Gantry<br/><b>Dual 2020 V-Slot Tracks</b>"]
-    end
-
-    subgraph Drive ["Drive & Actuation"]
-        M_ROLLER["25GA-370 DC Geared Motor<br/><b>Rotational Drum Drive</b>"]
-        M_DRIVE["Dual N20 Micro Gearmotors<br/><b>Linear Track Traversal</b>"]
-    end
-
-    subgraph Control ["Avionics & Power"]
-        ESP32["NodeMCU ESP32-WROOM-32D<br/><b>Deterministic FSM Core</b>"]
-        DRIVER["L298N Dual H-Bridge & Relay Module"]
-        PWR["2S BAK 18650 Li-Ion (7.4V)<br/><b>INA219 Power Monitor</b>"]
-    end
-
-    PANEL <==>|"1.20 mm Interference Compression"| ROLLER
-    ROLLER <---|"EN31 Steel Ground Axle"| M_ROLLER
-    GANTRY <---|"Direct Stepped Rim Couplers"| M_DRIVE
-    M_ROLLER <--- DRIVER
-    M_DRIVE <--- DRIVER
-    DRIVER <--->|"PWM & Direction Signals"| ESP32
-    PWR --->|"7.4V Power Bus"| DRIVER
-    PWR <--->|"I2C Voltage & Current Telemetry"| ESP32
-```
+<p align="center">
+  <img src="web/assets/branding/system_topology.svg" width="100%" alt="Project A.R.C. System Architecture Topology" />
+</p>
 
 ---
 
@@ -116,44 +91,9 @@ python cad/export_all.py
 
 The onboard firmware (`src/main.cpp`) is written in C++17 for the ESP32 platform using the PlatformIO build system. It executes a deterministic, non-blocking Finite State Machine (FSM):
 
-```mermaid
-stateDiagram-v2
-    direction TB
-
-    [*] --> STATE_IDLE: Boot / Power Up
-
-    STATE_IDLE --> STATE_ACQUIRE: Optical Target Detected (Serial P_target)
-    STATE_ACQUIRE --> STATE_FORWARD: Trajectory & Run Duration Computed
-    STATE_FORWARD --> STATE_CLEAN: Traverse Timer Elapsed (t >= t_run)
-    STATE_CLEAN --> STATE_DOCK: Hardware Limit Switch Tripped
-    STATE_DOCK --> STATE_IDLE: Docking Latched / Sequence Complete
-
-    note right of STATE_IDLE
-        All actuators de-energized.
-        Listening for CV coordinate packets.
-    end note
-
-    note right of STATE_ACQUIRE
-        Computes run duration t_run.
-        Samples pre-clean power baseline P_dirty.
-    end note
-
-    note right of STATE_FORWARD
-        Dual N20 drives engaged forward.
-        Millisecond hardware timer active.
-    end note
-
-    note right of STATE_CLEAN
-        25GA-370 microfiber roller spinning.
-        Radial blower air knife engaged.
-    end note
-
-    note right of STATE_DOCK
-        Reverses N20 motors toward home dock.
-        Samples post-clean power P_clean.
-        Computes efficiency gain eta_gain.
-    end note
-```
+<p align="center">
+  <img src="web/assets/branding/fsm_flowchart.svg" width="100%" alt="ESP32 Deterministic Finite State Machine Flowchart" />
+</p>
 
 ### Firmware Features
 * **Hardware Interrupt Handling**: Asynchronous pin change detection for limit switch trigger and emergency stop.

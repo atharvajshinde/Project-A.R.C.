@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="880" height="340">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap');
+      .bg-card { fill: #0d1117; stroke: #30363d; stroke-width: 1.5; rx: 12px; }
+      .sub-card { fill: #161b22; stroke: #30363d; stroke-width: 1; rx: 8px; }
+      .header-title { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; fill: #58a6ff; text-transform: uppercase; }
+      .card-title { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; fill: #f0f6fc; }
+      .card-desc { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; fill: #8b949e; }
+      .wire-line { stroke: #58a6ff; stroke-width: 1.5; fill: none; }
+      .wire-accent { stroke: #3fb950; stroke-width: 1.5; fill: none; stroke-dasharray: 4 3; }
+      .wire-pwr { stroke: #f0883e; stroke-width: 1.5; fill: none; }
+      .badge-bg { fill: #21262d; stroke: #30363d; stroke-width: 1; rx: 10px; }
+      .badge-txt { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 600; fill: #c9d1d9; text-anchor: middle; }
+    </style>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#58a6ff" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#3fb950" />
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#f0883e" />
+    </marker>
+  </defs>
+
+  <!-- Container -->
+  <rect x="1" y="1" width="878" height="338" class="bg-card" />
+
+  <!-- COLUMN 1: Physical Cleaning Stage -->
+  <text x="28" y="32" class="header-title">01 / Physical Cleaning Stage</text>
+  
+  <g transform="translate(24, 48)">
+    <rect width="250" height="72" class="sub-card" />
+    <text x="16" y="28" class="card-title">Photovoltaic Panel &amp; Testbed</text>
+    <text x="16" y="46" class="card-desc">Datum Level: Z = 0.00 mm</text>
+    <text x="16" y="60" class="card-desc">Flush Float Glass: 285x560 mm</text>
+  </g>
+
+  <g transform="translate(24, 140)">
+    <rect width="250" height="72" class="sub-card" />
+    <text x="16" y="28" class="card-title">Microfiber Cleaning Drum</text>
+    <text x="16" y="46" class="card-desc">800 GSM Plush Microfiber Pile</text>
+    <text x="16" y="60" class="card-desc">Compression: 1.20 mm onto glass</text>
+  </g>
+
+  <g transform="translate(24, 232)">
+    <rect width="250" height="72" class="sub-card" />
+    <text x="16" y="28" class="card-title">3-Wheel Motion Gantry</text>
+    <text x="16" y="46" class="card-desc">110 mm Wheelbase (0.32 Ratio)</text>
+    <text x="16" y="60" class="card-desc">Twin 600 mm 2020 V-Slot Rails</text>
+  </g>
+
+  <!-- COLUMN 2: Actuation & Drivers -->
+  <text x="320" y="32" class="header-title">02 / Actuation &amp; Power Train</text>
+
+  <g transform="translate(315, 80)">
+    <rect width="240" height="80" class="sub-card" />
+    <text x="16" y="28" class="card-title">25GA-370 DC Geared Motor</text>
+    <text x="16" y="48" class="card-desc">Dedicated Roller Drum Drive</text>
+    <text x="16" y="64" class="card-desc">Ground Steel EN31 dia 4.0 mm Axle</text>
+  </g>
+
+  <g transform="translate(315, 200)">
+    <rect width="240" height="80" class="sub-card" />
+    <text x="16" y="28" class="card-title">Dual N20 Micro Gearmotors</text>
+    <text x="16" y="48" class="card-desc">6V 300 RPM Direct Traversal</text>
+    <text x="16" y="64" class="card-desc">Stepped Rim Drive Couplers</text>
+  </g>
+
+  <!-- COLUMN 3: Avionics Deck -->
+  <text x="610" y="32" class="header-title">03 / Avionics &amp; Telemetry</text>
+
+  <g transform="translate(605, 48)">
+    <rect width="250" height="72" class="sub-card" />
+    <text x="16" y="28" class="card-title">ESP32-WROOM-32D Core</text>
+    <text x="16" y="46" class="card-desc">240 MHz Dual-Core FSM Engine</text>
+    <text x="16" y="60" class="card-desc">Hardware Limit Switch Interrupts</text>
+  </g>
+
+  <g transform="translate(605, 140)">
+    <rect width="250" height="72" class="sub-card" />
+    <text x="16" y="28" class="card-title">L298N Driver &amp; Relay</text>
+    <text x="16" y="46" class="card-desc">Dual H-Bridge Motor Switching</text>
+    <text x="16" y="60" class="card-desc">Isolated High-Level Roller Relay</text>
+  </g>
+
+  <g transform="translate(605, 232)">
+    <rect width="250" height="72" class="sub-card" />
+    <text x="16" y="28" class="card-title">2S Li-Ion &amp; INA219 Monitor</text>
+    <text x="16" y="46" class="card-desc">7.4V Nominal BAK 18650 Pack</text>
+    <text x="16" y="60" class="card-desc">I2C Real-Time Bus Power Sensing</text>
+  </g>
+
+  <!-- INTERCONNECT WIRES & LABELS -->
+  <!-- Col 1 to Col 2 -->
+  <path d="M 315 120 L 274 165" class="wire-line" marker-end="url(#arrow-blue)" />
+  <path d="M 315 240 L 274 265" class="wire-line" marker-end="url(#arrow-blue)" />
+
+  <!-- Col 3 to Col 2 -->
+  <path d="M 605 165 L 555 125" class="wire-line" marker-end="url(#arrow-blue)" />
+  <path d="M 605 185 L 555 235" class="wire-line" marker-end="url(#arrow-blue)" />
+
+  <!-- Col 3 Internal -->
+  <path d="M 730 120 L 730 140" class="wire-accent" marker-end="url(#arrow-green)" />
+  <path d="M 730 232 L 730 212" class="wire-pwr" marker-end="url(#arrow-amber)" />
+
+  <!-- Flow badges -->
+  <rect x="238" y="12" width="130" height="18" class="badge-bg" />
+  <text x="303" y="24" class="badge-txt">1.2mm Contact Datum</text>
+
+  <rect x="526" y="12" width="120" height="18" class="badge-bg" />
+  <text x="586" y="24" class="badge-txt">PWM / FSM Control</text>
+</svg>
