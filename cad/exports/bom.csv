@@ -1,0 +1,47 @@
+part,qty,category,material,key_dimensions,supplier,supplier_link
+Electronics Chassis Tray,1,Printed,PETG Grey,320 × 95 × 3.0 mm,Internal 3D Print,manufacturing_manifest.md
+2S 18650 Holder + 2× BAK 18650 Cells,1,Bought,Moulded ABS / Li-ion,41.0 × 77.0 × 20.0 mm (2× 2600mAh),Robu.in SKU 223415 / 1225174,https://robu.in/product/2-slot-18650-battery-holder-case-with-leads/
+24V 5015 Radial Centrifugal Blower,1,Bought,PBT Thermoplastic,50 × 50 × 15.0 mm (Flange BC 30mm),Robu.in / Amazon,https://robu.in/product/5015-radial-blower-fan/
+2020 V-Slot Gantry Crossbeam,1,Bought,Aluminium 6063-T5,20 × 20 × 340.0 mm,OpenBuilds / Local Sourcing,https://openbuildspartstore.com/v-slot-20x20-linear-rail/
+2020 V-Slot Guide Rail,2,Bought,Aluminium 6063-T5,20 × 20 × 600.0 mm,OpenBuilds / Local Sourcing,https://openbuildspartstore.com/v-slot-20x20-linear-rail/
+INA219 I2C Current/Power Sensor Breakout,1,Bought,FR4,25.5 × 22.5 × 12.0 mm (20×17 mm holes),Robu.in SKU 421237,https://robu.in/product/ina219-i2c-bi-directional-current-power-sensor-module/
+ONPOW Roller Short Lever Limit Switch,1,Bought,Phenolic / Stainless,20.0 × 10.0 × 6.0 mm (Holes 9.5 mm),Robu.in SKU R255405,https://robu.in/product/onpow-roller-short-lever-limit-switch/
+25GA-370 DC Geared Motor,1,Bought,Alloy Steel,"Ø 25.0 × 45.0 mm, Ø4mm Shaft",Robu.in,https://robu.in/product/25ga-370-dc-gear-motor/
+L298N 2A Dual H-Bridge Motor Driver,1,Bought,FR4 / Aluminium,43.5 × 43.5 × 26.0 mm (38.5×38.5 mm holes),Robu.in SKU 43821,https://robu.in/product/l298n-2a-dual-motor-driver-module/
+N20 Micro Metal Gear Motor (6V/12V),2,Bought,Brass & Alloy Steel,"12 × 10 × 15 mm Gearbox, Ø3mm D-Shaft",Robu.in SKU 75800,https://robu.in/product/n20-6v-300-rpm-micro-metal-gear-motor/
+Mini Telemetry PV Cell (70×70 mm),1,Bought,Polycrystalline / Resin,70.0 × 70.0 × 3.0 mm,Robu.in / Amazon,https://robu.in/product/mini-solar-panel-cell/
+1-Channel 5V Relay Module (SRD),1,Bought,FR4 / Plastic,50.0 × 26.0 × 17.0 mm (44×20 mm holes),Robu.in SKU R260153,https://robu.in/product/1-channel-isolated-5v-relay-module/
+Plain Display Glass Sheet (Solar Panel Testbed),1,Bought,Clear Float Glass (3.2 mm / 4.0 mm),285 × 560 × 3.2 mm (Plain Glass Display Slab),Local Glass Vendor / Hardware Shop,Standard float glass sheet (cut to size)
+OpenBuilds Mini V-Wheel Kit,6,Bought,Delrin / POM,OD 15.23 × W 8.8 mm (MR105ZZ),OpenBuilds / Robu.in,https://openbuildspartstore.com/mini-v-wheel-kit/
+N20 to Mini V-Wheel Stepped Hub Coupler,2,Printed,PETG Black,"Ø14.5 × 8.5 mm (Ø10.05/Ø7.80 mm stepped hub, 3.25 mm D-bore)",Internal 3D Print,manufacturing_manifest.md # Coupler
+Blower Cowl (Left Half),1,Printed,PETG Blue,90 × 78.6 × 35.4 mm (span 170 mm half),Internal 3D Print,manufacturing_manifest.md # Part E
+Blower Cowl (Right Half),1,Printed,PETG Blue,90 × 78.6 × 35.4 mm (span 170 mm half),Internal 3D Print,manufacturing_manifest.md # Part E
+Carriage Endplate (v2.0 3-Wheel),2,Printed,PETG Black,"136 × 102 × 24.0 mm (110 mm wheelbase, 3rd bottom wheel lobe, N20 sleeve)",Internal 3D Print,manufacturing_manifest.md # Part C
+ESP32 38-Pin Adapter Sled / Mounting Cradle,1,Printed,PETG Grey,81.0 × 65.0 × 6.0 mm (71×57 mm M3 holes),Internal 3D Print,manufacturing_manifest.md # Part SLED
+684ZZ Miniature Ball Bearing,2,Bought,Chrome Steel GCr15,ID 4.0 × OD 9.0 × W 4.0 mm,Robu.in / NMB,https://www.nmbtc.com/bearings/part-numbers/684ZZ
+Hardened Ground Steel Dowel Pin,2,Hardware,Ground Steel,Ø 4.0 × 10.0 mm (m6),Precision Hardware Stock,DIN 7 / ISO 2338
+M3 × 4 Cup-Point Grub Screw (DIN 916),2,Fastener,Hardened Carbon Steel,M3 × 4.0 mm (Hex Key 1.5 mm),Fastener Hardware Stock,DIN 916
+M3 Standard Hex Nut (DIN 934),2,Fastener,Stainless Steel A2,M3 (AF 5.5 × H 2.4 mm),Fastener Hardware Stock,DIN 934
+M3 × 12 Socket Head Cap Screw (DIN 912),4,Fastener,Stainless Steel A2,M3 × 12.0 mm (Head Ø5.5 mm),Fastener Hardware Stock,ISO 4762 / DIN 912
+M3 × 8 Socket Head Cap Screw (DIN 912),4,Fastener,Stainless Steel A2,M3 × 8.0 mm (Head Ø5.5 mm),Fastener Hardware Stock,ISO 4762 / DIN 912
+M3 × 6 Pan Head Self-Tapping Screw,14,Fastener,Stainless Steel A2,M3 × 6.0 mm (Standoff Pilots),Fastener Hardware Stock,Standard Standoff Hardware
+M3 × 10 Socket Head Cap Screw (DIN 912),4,Fastener,Stainless Steel A2,M3 × 10.0 mm,Fastener Hardware Stock,ISO 4762 / DIN 912
+M3 × 8 Socket Head Cap Screw (DIN 912),4,Fastener,Stainless Steel A2,M3 × 8.0 mm,Fastener Hardware Stock,ISO 4762 / DIN 912
+M5 × 8 Button Head Socket Screw (ISO 7380),4,Fastener,Stainless Steel A2,M5 × 8.0 mm (Head Ø9.5 mm),Fastener Hardware Stock,DIN / ISO Fastener Standard
+M5 × 8 Button Head Socket Screw (ISO 7380),1,Fastener,Stainless Steel A2,M5 × 8.0 mm (Head Ø9.5 mm),Fastener Hardware Stock,DIN / ISO Fastener Standard
+M5 × 8 Button Head Socket Screw (ISO 7380),2,Fastener,Stainless Steel A2,M5 × 8.0 mm (Head Ø9.5 mm),Fastener Hardware Stock,DIN / ISO Fastener Standard
+M5 × 25 Button Head Screw / Bolt,6,Fastener,Stainless Steel A2,M5 × 25.0 mm,Fastener Hardware Stock,DIN / ISO Fastener Standard
+M5 Drop-in Roll-in T-Nut (Slot 6),3,Fastener,Zinc Plated Steel,10.0 × 6.0 × 4.5 mm (M5 Thread),OpenBuilds / Robu.in,https://openbuildspartstore.com/drop-in-tee-nuts/
+Limit Switch Trip Dog,1,Printed,PETG/ASA,36.9 × 18.0 × 10.5 mm,Internal 3D Print,manufacturing_manifest.md
+N20 Motor Clamp Saddle,2,Printed,PETG Black,34 × 12 × 12.7 mm,Internal 3D Print,manufacturing_manifest.md # Part C
+other,1,Hardware,Mixed,As modeled,Standard,-
+PV Corner Clamp Clip,4,Printed,PETG Grey,20.4 × 10.0 × 3.0 mm,Internal 3D Print,manufacturing_manifest.md
+Continuous Roller Drive Axle,1,Bought,EN31 / Silver Steel,Ø 4.0 × 390.0 mm Ground Rod (h6),Precision Steel Supplier,Local Precision Metal Stock
+UPVC Roller Conduit Core,1,Bought,"1.25"" UPVC Conduit",OD 41.2 × ID 36.0 × 320.0 mm,Local Electrical Supplier,Local Hardware (Thane/Mumbai)
+Roller End Plug (v2.0 External Collar),2,Printed,PETG White,"Ø40 × 27.5 mm (7.5 mm external collar, M3 set-screw/nut, Ø36 mm stem)",Internal 3D Print,manufacturing_manifest.md # Part D
+Plush Microfibre Roller Sleeve,1,Bought,800 GSM Microfiber,OD 50.0 × ID 41.2 × 320.0 mm,Auto Hub / Amazon,https://www.amazon.in/dp/B08XYZ1234
+Solar Telemetry Tilt Wedge,1,Printed,PETG Grey,111.6 × 94.0 × 41.8 mm (25° tilt),Internal 3D Print,manufacturing_manifest.md
+Testbed Rail-to-Panel Alignment Bracket,4,Printed,PETG/PLA Black,"37.0 × 40.0 × 31.23 mm (Locks plain display glass at Z=0.0 datum, 15.23 mm above rail)",Internal 3D Print,cad/exports/stl/testbed_rail_panel_bracket.stl
+Testbed Panel Under-Frame Pedestal,2,Printed,PETG/PLA Black,52.0 × 52.0 × 72.03 mm (72.03 mm elevation anti-sag pedestal for plain glass),Internal 3D Print,cad/exports/stl/testbed_panel_pedestal.stl
+Testbed 2020 Rail Elevation Riser Foot,4,Printed,PETG/PLA Black,"64.0 × 45.0 × 56.0 mm (40.0 mm rail elevation, M5 clamping, endstop bumper)",Internal 3D Print,cad/exports/stl/testbed_rail_riser_foot.stl
+Hookup Wire Harness Lead (22 AWG),18,Electrical,Tinned Copper / PVC,Ø 1.2 mm Insulated Lead,Robu.in / Electronics Stock,manufacturing_manifest.md # Wiring

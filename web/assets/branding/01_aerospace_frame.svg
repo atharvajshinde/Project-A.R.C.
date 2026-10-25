@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="600" height="220">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap');
+      .frame-border {
+        fill: #0c0d0e;
+        stroke: #ffffff;
+        stroke-width: 2;
+        stroke-linejoin: miter;
+      }
+      .project-lbl {
+        font-family: 'Inter', sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 0.44em;
+        fill: #e2e8f0;
+        text-anchor: middle;
+      }
+      .tech-meta {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.22em;
+        fill: #94a3b8;
+      }
+      .tech-subtle {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.25em;
+        fill: #475569;
+      }
+      .arc-fill { fill: #ffffff; }
+    </style>
+    <g id="arc-symbol">
+    <!-- LETTER A -->
+    <polygon points="42,7 48,7 80,83 66,83 55,57 42,26" />
+    <polygon points="42,7 34,26 40,29 46,15" />
+    <path d="M 31 33 L 10 83 L 24 83 L 33 61 L 53 61 L 53 50 L 29 50 L 37 31 Z" />
+    <!-- PERIOD 1 -->
+    <rect x="86" y="71" width="12" height="12" />
+    <!-- LETTER R -->
+    <rect x="108" y="7" width="12" height="76" />
+    <path d="M 126 7 L 152 7 C 166 7, 175 16, 175 30 C 175 42, 166 50, 154 51 L 176 83 L 161 83 L 141 53 L 126 53 L 126 42 L 150 42 C 158 42, 163 37, 163 30 C 163 22, 158 18, 150 18 L 126 18 Z" />
+    <!-- PERIOD 2 -->
+    <rect x="182" y="71" width="12" height="12" />
+    <!-- LETTER C -->
+    <path d="M 247 7.5 L 247 19 C 224 21, 211 32, 211 45 C 211 58, 224 69, 247 71 L 247 82.5 C 217 80, 199 65, 199 45 C 199 25, 217 10, 247 7.5 Z" />
+    <path d="M 253 8.7 C 263 11, 270 17, 275 24 L 265 31 C 262 26, 257 21, 253 19.8 Z" />
+    <path d="M 253 81.3 L 253 70.2 C 257 69, 262 64, 265 59 L 275 66 C 270 73, 263 79, 253 81.3 Z" />
+    <!-- PERIOD 3 -->
+    <rect x="282" y="71" width="12" height="12" />
+
+    </g>
+  </defs>
+
+  <!-- Technical Chamfered Placard Frame -->
+  <path d="M 28 6 
+           L 572 6 
+           L 594 28 
+           L 594 192 
+           L 572 214 
+           L 28 214 
+           L 6 192 
+           L 6 28 Z" class="frame-border" />
+
+  <!-- Top metadata -->
+  <text x="32" y="32" class="tech-subtle">TECHFEST // AUTONOMY</text>
+
+  <!-- Center typography -->
+  <text x="300" y="78" class="project-lbl">PROJECT</text>
+  <g transform="translate(145, 95)" class="arc-fill">
+    <use href="#arc-symbol" />
+  </g>
+
+  <!-- Bottom metadata -->
+  <text x="32" y="196" class="tech-meta">THANE, IND</text>
+  <text x="568" y="196" class="tech-meta" text-anchor="end">V2.0</text>
+</svg>

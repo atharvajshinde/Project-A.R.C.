@@ -1,0 +1,44 @@
+# ==============================================================================
+# PROJECT A.R.C. — GIT IGNORE CONFIGURATION
+# ==============================================================================
+
+# Python & Virtual Environments
+.venv/
+cad/.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.ruff_cache/
+.cache/
+
+# PlatformIO & Embedded Build Artifacts
+.pio/
+compile_commands.json
+*.hex
+*.bin
+*.elf
+
+# LaTeX Intermediates (keep .tex and compiled .pdf)
+docs/*.aux
+docs/*.log
+docs/*.out
+docs/*.toc
+docs/*.synctex.gz
+docs/*.fls
+docs/*.fdb_latexmk
+
+# Editor & OS Metadata
+.vscode/
+.idea/
+.directory
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Sensitive Local Data & Competition Credentials
+notes.txt
+docs/IMPORTANT-README.pdf

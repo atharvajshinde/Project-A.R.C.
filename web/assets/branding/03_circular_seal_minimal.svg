@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" width="420" height="420">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&amp;display=swap');
+      .seal-bg { fill: #070809; }
+      .ring-single { fill: none; stroke: #ffffff; stroke-width: 2.5; }
+      .arc-fill { fill: #ffffff; }
+      .sparkle { fill: #ffffff; }
+    </style>
+    <g id="arc-symbol">
+    <!-- LETTER A -->
+    <polygon points="42,7 48,7 80,83 66,83 55,57 42,26" />
+    <polygon points="42,7 34,26 40,29 46,15" />
+    <path d="M 31 33 L 10 83 L 24 83 L 33 61 L 53 61 L 53 50 L 29 50 L 37 31 Z" />
+    <!-- PERIOD 1 -->
+    <rect x="86" y="71" width="12" height="12" />
+    <!-- LETTER R -->
+    <rect x="108" y="7" width="12" height="76" />
+    <path d="M 126 7 L 152 7 C 166 7, 175 16, 175 30 C 175 42, 166 50, 154 51 L 176 83 L 161 83 L 141 53 L 126 53 L 126 42 L 150 42 C 158 42, 163 37, 163 30 C 163 22, 158 18, 150 18 L 126 18 Z" />
+    <!-- PERIOD 2 -->
+    <rect x="182" y="71" width="12" height="12" />
+    <!-- LETTER C -->
+    <path d="M 247 7.5 L 247 19 C 224 21, 211 32, 211 45 C 211 58, 224 69, 247 71 L 247 82.5 C 217 80, 199 65, 199 45 C 199 25, 217 10, 247 7.5 Z" />
+    <path d="M 253 8.7 C 263 11, 270 17, 275 24 L 265 31 C 262 26, 257 21, 253 19.8 Z" />
+    <path d="M 253 81.3 L 253 70.2 C 257 69, 262 64, 265 59 L 275 66 C 270 73, 263 79, 253 81.3 Z" />
+    <!-- PERIOD 3 -->
+    <rect x="282" y="71" width="12" height="12" />
+
+    </g>
+  </defs>
+
+  <!-- Circular Body -->
+  <circle cx="210" cy="210" r="198" class="seal-bg" />
+  <circle cx="210" cy="210" r="194" class="ring-single" />
+
+  <!-- Left Accent Dot -->
+  <circle cx="82" cy="195" r="6.5" class="sparkle" />
+
+  <!-- Center Stencil A.R.C. -->
+  <g transform="translate(98, 160) scale(0.72)" class="arc-fill">
+    <use href="#arc-symbol" />
+  </g>
+
+  <!-- Right Accent Dot -->
+  <circle cx="338" cy="195" r="6.5" class="sparkle" />
+
+  <!-- Bottom Curved Text: PV GANTRY -->
+  <text x="122.82" y="334.51" font-family="'Inter', sans-serif" font-size="20" font-weight="600" fill="#ffffff" text-anchor="middle" dominant-baseline="central" transform="rotate(395.00, 122.82, 334.51)">P</text>
+    <text x="142.77" y="346.32" font-family="'Inter', sans-serif" font-size="20" font-weight="600" fill="#ffffff" text-anchor="middle" dominant-baseline="central" transform="rotate(386.25, 142.77, 346.32)">V</text>
+    <text x="186.88" y="360.23" font-family="'Inter', sans-serif" font-size="20" font-weight="600" fill="#ffffff" text-anchor="middle" dominant-baseline="central" transform="rotate(368.75, 186.88, 360.23)">G</text>
+    <text x="210.00" y="362.00" font-family="'Inter', sans-serif" font-size="20" font-weight="600" fill="#ffffff" text-anchor="middle" dominant-baseline="central" transform="rotate(360.00, 210.00, 362.00)">A</text>
+    <text x="233.12" y="360.23" font-family="'Inter', sans-serif" font-size="20" font-weight="600" fill="#ffffff" text-anchor="middle" dominant-baseline="central" transform="rotate(351.25, 233.12, 360.23)">N</text>
+    <text x="255.71" y="354.96" font-family="'Inter', sans-serif" font-size="20" font-weight="600" fill="#ffffff" text-anchor="middle" dominant-baseline="central" transform="rotate(342.50, 255.71, 354.96)">T</text>
+    <text x="277.23" y="346.32" font-family="'Inter', sans-serif" font-size="20" font-weight="600" fill="#ffffff" text-anchor="middle" dominant-baseline="central" transform="rotate(333.75, 277.23, 346.32)">R</text>
+    <text x="297.18" y="334.51" font-family="'Inter', sans-serif" font-size="20" font-weight="600" fill="#ffffff" text-anchor="middle" dominant-baseline="central" transform="rotate(325.00, 297.18, 334.51)">Y</text>
+
+  <!-- Four-Pointed Star Sparkles (Bot Right) -->
+  <path d="M 370 290 Q 370 305 385 305 Q 370 305 370 320 Q 370 305 355 305 Q 370 305 370 290 Z" class="sparkle" opacity="0.9" />
+  <path d="M 395 340 Q 395 352 407 352 Q 395 352 395 364 Q 395 352 383 352 Q 395 352 395 340 Z" class="sparkle" opacity="0.75" />
+</svg>
