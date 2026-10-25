@@ -12,6 +12,12 @@
 [![Geometry Tests: 57 Passed](https://img.shields.io/badge/Unit%20Tests-57%20Passed-brightgreen?style=flat-square)](cad/tests/)
 [![Web Twin: Three.js / WebGL](https://img.shields.io/badge/Digital%20Twin-WebGL%20%2F%20Three.js-000000?style=flat-square&logo=three.js&logoColor=white)](web/)
 
+<br /><br />
+
+<img src="RENDER.png" width="100%" alt="Project A.R.C. Autonomous Photovoltaic Maintenance Robot" />
+
+<br />
+
 <p align="center">
   <a href="#overview">Overview</a> &bull;
   <a href="#system-architecture">Architecture</a> &bull;
