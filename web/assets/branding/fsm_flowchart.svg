@@ -1,100 +1,182 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 200" width="880" height="200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 244" width="940" height="244">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap');
-      .bg-panel { fill: #0d1117; stroke: #30363d; stroke-width: 1.5; rx: 12px; }
-      .state-box { fill: #161b22; stroke: #30363d; stroke-width: 1.5; rx: 8px; }
-      .state-chip { rx: 4px; }
-      .chip-txt { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
-      .state-action { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; fill: #f0f6fc; }
-      .state-sub { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; fill: #8b949e; }
-      .arrow-link { stroke: #58a6ff; stroke-width: 1.8; fill: none; }
-      .arrow-return { stroke: #8b949e; stroke-width: 1.5; stroke-dasharray: 4 3; fill: none; }
-      .trans-lbl { font-family: 'JetBrains Mono', monospace; font-size: 8.5px; font-weight: 600; fill: #58a6ff; text-anchor: middle; }
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap');
+      .frame-border {
+        fill: #0c0d0e;
+        stroke: #ffffff;
+        stroke-width: 1.5;
+        stroke-linejoin: miter;
+      }
+      .tech-subtle {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9.5px;
+        font-weight: 400;
+        letter-spacing: 0.20em;
+        fill: #64748b;
+      }
+      .state-box {
+        fill: #111418;
+        stroke: #334155;
+        stroke-width: 1;
+      }
+      .state-header-bg {
+        fill: #1a1f26;
+        stroke: #334155;
+        stroke-width: 1;
+      }
+      .state-code {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        fill: #ffffff;
+        text-anchor: middle;
+      }
+      .state-action {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        fill: #f1f5f9;
+      }
+      .state-spec {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 8.5px;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        fill: #94a3b8;
+      }
+      .bullet-dot {
+        fill: #475569;
+        font-weight: bold;
+      }
+      .trans-line {
+        stroke: #cbd5e1;
+        stroke-width: 1.4;
+        fill: none;
+      }
+      .trans-lbl {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 8.5px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        fill: #cbd5e1;
+        text-anchor: middle;
+      }
+      .return-line {
+        stroke: #64748b;
+        stroke-width: 1.2;
+        stroke-dasharray: 4 3;
+        fill: none;
+      }
+      .return-txt {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9px;
+        font-weight: 500;
+        letter-spacing: 0.20em;
+        fill: #94a3b8;
+      }
     </style>
     <marker id="fsm-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 8 5 L 0 9 z" fill="#58a6ff" />
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#cbd5e1" />
     </marker>
     <marker id="fsm-return" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 8 5 L 0 9 z" fill="#8b949e" />
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#64748b" />
     </marker>
   </defs>
 
-  <!-- Panel Base -->
-  <rect x="1" y="1" width="878" height="198" class="bg-panel" />
+  <!-- Technical Chamfered Placard Frame -->
+  <path d="M 28 6 L 912 6 L 934 28 L 934 216 L 912 238 L 28 238 L 6 216 L 6 28 Z" class="frame-border" />
 
-  <!-- STATE 1: IDLE -->
-  <g transform="translate(20, 36)">
-    <rect width="144" height="110" class="state-box" />
-    <rect x="10" y="12" width="124" height="22" fill="#30363d" class="state-chip" />
-    <text x="72" y="27" class="chip-txt">01 // IDLE</text>
-    <text x="12" y="56" class="state-action">Standby Loop</text>
-    <text x="12" y="74" class="state-sub">&bull; Drives De-energized</text>
-    <text x="12" y="88" class="state-sub">&bull; Await CV Packet</text>
-    <text x="12" y="102" class="state-sub">&bull; Listening on UART</text>
+  <!-- Top Metadata Bar -->
+  <text x="28" y="22" class="tech-subtle">ESP32 FIRMWARE // FINITE STATE MACHINE (FSM)</text>
+  <text x="912" y="22" class="tech-subtle" text-anchor="end">NON-BLOCKING DETERMINISTIC ENGINE</text>
+  <line x1="28" y1="30" x2="912" y2="30" stroke="#22272e" stroke-width="1" />
+
+  <!-- STATE 1: IDLE (x=28..156, w=128) -->
+  <g transform="translate(28, 42)">
+    <rect width="128" height="122" class="state-box" />
+    <rect width="128" height="24" class="state-header-bg" />
+    <text x="64" y="16" class="state-code">01 // IDLE</text>
+    <text x="10" y="42" class="state-action">Standby Loop</text>
+    <line x1="10" y1="50" x2="118" y2="50" stroke="#262d38" stroke-width="1" />
+    <text x="10" y="68" class="state-spec"><tspan class="bullet-dot">&#8226; </tspan>Drives De-energized</text>
+    <text x="10" y="84" class="state-spec"><tspan class="bullet-dot">&#8226; </tspan>Await CV Packet</text>
+    <text x="10" y="100" class="state-spec"><tspan class="bullet-dot">&#8226; </tspan>UART Stream Active</text>
   </g>
 
-  <!-- Transition 1 -->
-  <line x1="164" y1="91" x2="196" y2="91" class="arrow-link" marker-end="url(#fsm-arrow)" />
-  <text x="180" y="82" class="trans-lbl">P_target</text>
+  <!-- Transition 1 (Gap 156..218 = 62px) -->
+  <text x="187" y="96" class="trans-lbl">P_target</text>
+  <line x1="156" y1="105" x2="218" y2="105" class="trans-line" marker-end="url(#fsm-arrow)" />
 
-  <!-- STATE 2: ACQUIRE -->
-  <g transform="translate(196, 36)">
-    <rect width="144" height="110" class="state-box" />
-    <rect x="10" y="12" width="124" height="22" fill="#d29922" class="state-chip" />
-    <text x="72" y="27" class="chip-txt">02 // ACQUIRE</text>
-    <text x="12" y="56" class="state-action">Trajectory Calc</text>
-    <text x="12" y="74" class="state-sub">&bull; Compute t_run (ms)</text>
-    <text x="12" y="88" class="state-sub">&bull; Sample P_dirty (mW)</text>
-    <text x="12" y="102" class="state-sub">&bull; Arm Motor Timers</text>
+  <!-- STATE 2: ACQUIRE (x=218..346, w=128) -->
+  <g transform="translate(218, 42)">
+    <rect width="128" height="122" class="state-box" />
+    <rect width="128" height="24" class="state-header-bg" />
+    <text x="64" y="16" class="state-code">02 // ACQUIRE</text>
+    <text x="10" y="42" class="state-action">Trajectory Calc</text>
+    <line x1="10" y1="50" x2="118" y2="50" stroke="#262d38" stroke-width="1" />
+    <text x="10" y="68" class="state-spec"><tspan class="bullet-dot">&#8226; </tspan>Compute t_run (ms)</text>
+    <text x="10" y="84" class="state-spec"><tspan class="bullet-dot">&#8226; </tspan>Sample P_dirty (mW)</text>
+    <text x="10" y="100" class="state-spec"><tspan class="bullet-dot">&#8226; </tspan>Arm Motor Timers</text>
   </g>
 
-  <!-- Transition 2 -->
-  <line x1="340" y1="91" x2="372" y2="91" class="arrow-link" marker-end="url(#fsm-arrow)" />
-  <text x="356" y="82" class="trans-lbl">t_run</text>
+  <!-- Transition 2 (Gap 346..408 = 62px) -->
+  <text x="377" y="96" class="trans-lbl">t_run</text>
+  <line x1="346" y1="105" x2="408" y2="105" class="trans-line" marker-end="url(#fsm-arrow)" />
 
-  <!-- STATE 3: FORWARD -->
-  <g transform="translate(372, 36)">
-    <rect width="144" height="110" class="state-box" />
-    <rect x="10" y="12" width="124" height="22" fill="#1f6feb" class="state-chip" />
-    <text x="72" y="27" class="chip-txt">03 // FORWARD</text>
-    <text x="12" y="56" class="state-action">Track Traversal</text>
-    <text x="12" y="74" class="state-sub">&bull; Dual N20 Drives FWD</text>
-    <text x="12" y="88" class="state-sub">&bull; Non-blocking millis()</text>
-    <text x="12" y="102" class="state-sub">&bull; Approach Target</text>
+  <!-- STATE 3: FORWARD (x=408..536, w=128) -->
+  <g transform="translate(408, 42)">
+    <rect width="128" height="122" class="state-box" />
+    <rect width="128" height="24" class="state-header-bg" />
+    <text x="64" y="16" class="state-code">03 // FORWARD</text>
+    <text x="10" y="42" class="state-action">Track Traversal</text>
+    <line x1="10" y1="50" x2="118" y2="50" stroke="#262d38" stroke-width="1" />
+    <text x="10" y="68" class="state-spec"><tspan class="bullet-dot">&#8226; </tspan>Dual N20 FWD Run</text>
+    <text x="10" y="84" class="state-spec"><tspan class="bullet-dot">&#8226; </tspan>Non-blocking millis</text>
+    <text x="10" y="100" class="state-spec"><tspan class="bullet-dot">&#8226; </tspan>Approach Target</text>
   </g>
 
-  <!-- Transition 3 -->
-  <line x1="516" y1="91" x2="548" y2="91" class="arrow-link" marker-end="url(#fsm-arrow)" />
-  <text x="532" y="82" class="trans-lbl">t &gt;= t_run</text>
+  <!-- Transition 3 (Gap 536..600 = 64px) -->
+  <text x="568" y="96" class="trans-lbl">t &gt;= t_run</text>
+  <line x1="536" y1="105" x2="600" y2="105" class="trans-line" marker-end="url(#fsm-arrow)" />
 
-  <!-- STATE 4: CLEAN -->
-  <g transform="translate(548, 36)">
-    <rect width="144" height="110" class="state-box" />
-    <rect x="10" y="12" width="124" height="22" fill="#238636" class="state-chip" />
-    <text x="72" y="27" class="chip-txt">04 // CLEAN</text>
-    <text x="12" y="56" class="state-action">Active Scrub &amp; Blast</text>
-    <text x="12" y="74" class="state-sub">&bull; 25GA Roller Spin</text>
-    <text x="12" y="88" class="state-sub">&bull; Microfiber Agitation</text>
-    <text x="12" y="102" class="state-sub">&bull; Air Knife Engaged</text>
+  <!-- STATE 4: CLEAN (x=600..728, w=128) -->
+  <g transform="translate(600, 42)">
+    <rect width="128" height="122" class="state-box" />
+    <rect width="128" height="24" class="state-header-bg" />
+    <text x="64" y="16" class="state-code">04 // CLEAN</text>
+    <text x="10" y="42" class="state-action">Active Scrub &amp; Blast</text>
+    <line x1="10" y1="50" x2="118" y2="50" stroke="#262d38" stroke-width="1" />
+    <text x="10" y="68" class="state-spec"><tspan class="bullet-dot">&#8226; </tspan>25GA Roller Spin</text>
+    <text x="10" y="84" class="state-spec"><tspan class="bullet-dot">&#8226; </tspan>Microfiber Sweep</text>
+    <text x="10" y="100" class="state-spec"><tspan class="bullet-dot">&#8226; </tspan>Air Knife Engaged</text>
   </g>
 
-  <!-- Transition 4 -->
-  <line x1="692" y1="91" x2="724" y2="91" class="arrow-link" marker-end="url(#fsm-arrow)" />
-  <text x="708" y="82" class="trans-lbl">Endstop</text>
+  <!-- Transition 4 (Gap 728..784 = 56px) -->
+  <text x="756" y="96" class="trans-lbl">Endstop</text>
+  <line x1="728" y1="105" x2="784" y2="105" class="trans-line" marker-end="url(#fsm-arrow)" />
 
-  <!-- STATE 5: DOCK -->
-  <g transform="translate(724, 36)">
-    <rect width="136" height="110" class="state-box" />
-    <rect x="10" y="12" width="116" height="22" fill="#8957e5" class="state-chip" />
-    <text x="68" y="27" class="chip-txt">05 // DOCK</text>
-    <text x="12" y="56" class="state-action">Reverse Home</text>
-    <text x="12" y="74" class="state-sub">&bull; Reverse to Origin</text>
-    <text x="12" y="88" class="state-sub">&bull; Sample P_clean</text>
-    <text x="12" y="102" class="state-sub">&bull; Compute eta_gain</text>
+  <!-- STATE 5: DOCK (x=784..912, w=128) -->
+  <g transform="translate(784, 42)">
+    <rect width="128" height="122" class="state-box" />
+    <rect width="128" height="24" class="state-header-bg" />
+    <text x="64" y="16" class="state-code">05 // DOCK</text>
+    <text x="10" y="42" class="state-action">Reverse Home</text>
+    <line x1="10" y1="50" x2="118" y2="50" stroke="#262d38" stroke-width="1" />
+    <text x="10" y="68" class="state-spec"><tspan class="bullet-dot">&#8226; </tspan>Reverse to Origin</text>
+    <text x="10" y="84" class="state-spec"><tspan class="bullet-dot">&#8226; </tspan>Sample P_clean</text>
+    <text x="10" y="100" class="state-spec"><tspan class="bullet-dot">&#8226; </tspan>Compute eta_gain</text>
   </g>
 
-  <!-- Cycle Return Loop Back to Idle -->
-  <path d="M 792 146 L 792 172 L 92 172 L 92 146" class="arrow-return" marker-end="url(#fsm-return)" />
-  <text x="440" y="168" class="state-sub" text-anchor="middle">Cycle Complete &mdash; Reset to Idle Standby</text>
+  <!-- Return Loop Back to Idle -->
+  <path d="M 848 164 L 848 190 L 92 190 L 92 170" class="return-line" marker-end="url(#fsm-return)" />
+  <rect x="340" y="181" width="260" height="18" rx="2" fill="#0c0d0e" stroke="#334155" stroke-width="1" />
+  <text x="470" y="193.5" class="return-txt" text-anchor="middle">CYCLE COMPLETE // RESET TO STANDBY</text>
+
+  <!-- Bottom Metadata Bar -->
+  <line x1="28" y1="214" x2="912" y2="214" stroke="#22272e" stroke-width="1" />
+  <text x="28" y="226" class="tech-subtle">HARDWARE INTERRUPTS // ASYNC LIMIT SWITCH DETECT</text>
+  <text x="912" y="226" class="tech-subtle" text-anchor="end">CYCLE: DETERMINISTIC // PWR: INA219 I2C</text>
 </svg>

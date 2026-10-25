@@ -1,114 +1,208 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="880" height="340">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 384" width="920" height="384">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap');
-      .bg-card { fill: #0d1117; stroke: #30363d; stroke-width: 1.5; rx: 12px; }
-      .sub-card { fill: #161b22; stroke: #30363d; stroke-width: 1; rx: 8px; }
-      .header-title { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; fill: #58a6ff; text-transform: uppercase; }
-      .card-title { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; fill: #f0f6fc; }
-      .card-desc { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; fill: #8b949e; }
-      .wire-line { stroke: #58a6ff; stroke-width: 1.5; fill: none; }
-      .wire-accent { stroke: #3fb950; stroke-width: 1.5; fill: none; stroke-dasharray: 4 3; }
-      .wire-pwr { stroke: #f0883e; stroke-width: 1.5; fill: none; }
-      .badge-bg { fill: #21262d; stroke: #30363d; stroke-width: 1; rx: 10px; }
-      .badge-txt { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 600; fill: #c9d1d9; text-anchor: middle; }
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap');
+      .frame-border {
+        fill: #0c0d0e;
+        stroke: #ffffff;
+        stroke-width: 1.5;
+        stroke-linejoin: miter;
+      }
+      .col-header {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        fill: #ffffff;
+        text-transform: uppercase;
+      }
+      .tech-subtle {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9.5px;
+        font-weight: 400;
+        letter-spacing: 0.20em;
+        fill: #64748b;
+      }
+      .card-box {
+        fill: #111418;
+        stroke: #334155;
+        stroke-width: 1;
+      }
+      .card-header-bg {
+        fill: #1a1f26;
+        stroke: #334155;
+        stroke-width: 1;
+      }
+      .card-title {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        fill: #f8fafc;
+      }
+      .card-spec {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 8.5px;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        fill: #94a3b8;
+      }
+      .bullet-dot {
+        fill: #475569;
+        font-weight: bold;
+      }
+      .wire-ctrl {
+        stroke: #cbd5e1;
+        stroke-width: 1.4;
+        fill: none;
+      }
+      .wire-mech {
+        stroke: #94a3b8;
+        stroke-width: 1.4;
+        fill: none;
+      }
+      .wire-pwr {
+        stroke: #64748b;
+        stroke-width: 1.2;
+        stroke-dasharray: 4 3;
+        fill: none;
+      }
+      .badge-bg {
+        fill: #161a22;
+        stroke: #475569;
+        stroke-width: 0.8;
+      }
+      .badge-txt {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 7.5px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        fill: #e2e8f0;
+        text-anchor: middle;
+      }
     </style>
-    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 8 5 L 0 9 z" fill="#58a6ff" />
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#cbd5e1" />
     </marker>
-    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 8 5 L 0 9 z" fill="#3fb950" />
+    <marker id="arrow-mech" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#94a3b8" />
     </marker>
-    <marker id="arrow-amber" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 8 5 L 0 9 z" fill="#f0883e" />
+    <marker id="arrow-pwr" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#64748b" />
     </marker>
   </defs>
 
-  <!-- Container -->
-  <rect x="1" y="1" width="878" height="338" class="bg-card" />
+  <!-- Technical Chamfered Placard Frame -->
+  <path d="M 28 6 L 892 6 L 914 28 L 914 356 L 892 378 L 28 378 L 6 356 L 6 28 Z" class="frame-border" />
 
-  <!-- COLUMN 1: Physical Cleaning Stage -->
-  <text x="28" y="32" class="header-title">01 / Physical Cleaning Stage</text>
+  <!-- Top Metadata Bar -->
+  <text x="28" y="22" class="tech-subtle">PROJECT A.R.C. // HARDWARE SYSTEM ARCHITECTURE TOPOLOGY</text>
+  <text x="892" y="22" class="tech-subtle" text-anchor="end">AUTONOMOUS PV CLEANER // REV 2.0</text>
+  <line x1="28" y1="30" x2="892" y2="30" stroke="#22272e" stroke-width="1" />
+
+  <!-- COLUMN 1: Physical Cleaning Stage (x=28..268, w=240) -->
+  <text x="28" y="49" class="col-header">01 // Physical Cleaning Stage</text>
   
-  <g transform="translate(24, 48)">
-    <rect width="250" height="72" class="sub-card" />
-    <text x="16" y="28" class="card-title">Photovoltaic Panel &amp; Testbed</text>
-    <text x="16" y="46" class="card-desc">Datum Level: Z = 0.00 mm</text>
-    <text x="16" y="60" class="card-desc">Flush Float Glass: 285x560 mm</text>
+  <g transform="translate(28, 62)">
+    <rect width="240" height="78" class="card-box" />
+    <rect width="240" height="22" class="card-header-bg" />
+    <text x="10" y="15" class="card-title">Photovoltaic Panel &amp; Testbed</text>
+    <text x="10" y="38" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>Datum Level: Z = 0.00 mm</text>
+    <text x="10" y="52" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>Float Glass: 285 x 560 mm (3.2 mm)</text>
+    <text x="10" y="66" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>Base: 6063-T5 Structural Aluminum</text>
   </g>
 
-  <g transform="translate(24, 140)">
-    <rect width="250" height="72" class="sub-card" />
-    <text x="16" y="28" class="card-title">Microfiber Cleaning Drum</text>
-    <text x="16" y="46" class="card-desc">800 GSM Plush Microfiber Pile</text>
-    <text x="16" y="60" class="card-desc">Compression: 1.20 mm onto glass</text>
+  <g transform="translate(28, 156)">
+    <rect width="240" height="78" class="card-box" />
+    <rect width="240" height="22" class="card-header-bg" />
+    <text x="10" y="15" class="card-title">Microfiber Cleaning Drum</text>
+    <text x="10" y="38" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>800 GSM Plush Microfiber Wrap</text>
+    <text x="10" y="52" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>Ground Steel EN31 Axle (dia 4.0 mm)</text>
+    <text x="10" y="66" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>Compression: 1.20 mm onto Glass</text>
   </g>
 
-  <g transform="translate(24, 232)">
-    <rect width="250" height="72" class="sub-card" />
-    <text x="16" y="28" class="card-title">3-Wheel Motion Gantry</text>
-    <text x="16" y="46" class="card-desc">110 mm Wheelbase (0.32 Ratio)</text>
-    <text x="16" y="60" class="card-desc">Twin 600 mm 2020 V-Slot Rails</text>
+  <g transform="translate(28, 250)">
+    <rect width="240" height="78" class="card-box" />
+    <rect width="240" height="22" class="card-header-bg" />
+    <text x="10" y="15" class="card-title">3-Wheel Motion Gantry</text>
+    <text x="10" y="38" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>110 mm Wheelbase (0.32 Span Ratio)</text>
+    <text x="10" y="52" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>Twin 600 mm 2020 V-Slot Rails</text>
+    <text x="10" y="66" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>Delrin Mini V-Wheels + Eccentric</text>
   </g>
 
-  <!-- COLUMN 2: Actuation & Drivers -->
-  <text x="320" y="32" class="header-title">02 / Actuation &amp; Power Train</text>
+  <!-- COLUMN 2: Actuation & Drivers (x=340..580, w=240, Gap 1 = 268..340 = 72px) -->
+  <text x="340" y="49" class="col-header">02 // Actuation &amp; Power Train</text>
 
-  <g transform="translate(315, 80)">
-    <rect width="240" height="80" class="sub-card" />
-    <text x="16" y="28" class="card-title">25GA-370 DC Geared Motor</text>
-    <text x="16" y="48" class="card-desc">Dedicated Roller Drum Drive</text>
-    <text x="16" y="64" class="card-desc">Ground Steel EN31 dia 4.0 mm Axle</text>
+  <g transform="translate(340, 94)">
+    <rect width="240" height="88" class="card-box" />
+    <rect width="240" height="22" class="card-header-bg" />
+    <text x="10" y="15" class="card-title">25GA-370 DC Geared Motor</text>
+    <text x="10" y="40" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>Dedicated Drum Rotation Drive</text>
+    <text x="10" y="56" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>Optically Isolated Relay Interlock</text>
+    <text x="10" y="72" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>High-Torque Mechanical Coupling</text>
   </g>
 
-  <g transform="translate(315, 200)">
-    <rect width="240" height="80" class="sub-card" />
-    <text x="16" y="28" class="card-title">Dual N20 Micro Gearmotors</text>
-    <text x="16" y="48" class="card-desc">6V 300 RPM Direct Traversal</text>
-    <text x="16" y="64" class="card-desc">Stepped Rim Drive Couplers</text>
+  <g transform="translate(340, 220)">
+    <rect width="240" height="88" class="card-box" />
+    <rect width="240" height="22" class="card-header-bg" />
+    <text x="10" y="15" class="card-title">Dual N20 Micro Gearmotors</text>
+    <text x="10" y="40" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>6V 300 RPM Direct Traversal</text>
+    <text x="10" y="56" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>Stepped Rim Drive Couplers</text>
+    <text x="10" y="72" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>Dual H-Bridge PWM Direction</text>
   </g>
 
-  <!-- COLUMN 3: Avionics Deck -->
-  <text x="610" y="32" class="header-title">03 / Avionics &amp; Telemetry</text>
+  <!-- COLUMN 3: Avionics Deck (x=652..892, w=240, Gap 2 = 580..652 = 72px) -->
+  <text x="652" y="49" class="col-header">03 // Avionics &amp; Telemetry</text>
 
-  <g transform="translate(605, 48)">
-    <rect width="250" height="72" class="sub-card" />
-    <text x="16" y="28" class="card-title">ESP32-WROOM-32D Core</text>
-    <text x="16" y="46" class="card-desc">240 MHz Dual-Core FSM Engine</text>
-    <text x="16" y="60" class="card-desc">Hardware Limit Switch Interrupts</text>
+  <g transform="translate(652, 62)">
+    <rect width="240" height="78" class="card-box" />
+    <rect width="240" height="22" class="card-header-bg" />
+    <text x="10" y="15" class="card-title">ESP32-WROOM-32D Core</text>
+    <text x="10" y="38" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>240 MHz Dual-Core Tensilica Xtensa</text>
+    <text x="10" y="52" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>Deterministic FSM Engine</text>
+    <text x="10" y="66" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>Asynchronous Limit Interrupts</text>
   </g>
 
-  <g transform="translate(605, 140)">
-    <rect width="250" height="72" class="sub-card" />
-    <text x="16" y="28" class="card-title">L298N Driver &amp; Relay</text>
-    <text x="16" y="46" class="card-desc">Dual H-Bridge Motor Switching</text>
-    <text x="16" y="60" class="card-desc">Isolated High-Level Roller Relay</text>
+  <g transform="translate(652, 156)">
+    <rect width="240" height="78" class="card-box" />
+    <rect width="240" height="22" class="card-header-bg" />
+    <text x="10" y="15" class="card-title">L298N Driver &amp; Relay</text>
+    <text x="10" y="38" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>Dual H-Bridge Motor Switching</text>
+    <text x="10" y="52" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>Optically Isolated Roller Relay</text>
+    <text x="10" y="66" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>Flyback Clamping Diodes</text>
   </g>
 
-  <g transform="translate(605, 232)">
-    <rect width="250" height="72" class="sub-card" />
-    <text x="16" y="28" class="card-title">2S Li-Ion &amp; INA219 Monitor</text>
-    <text x="16" y="46" class="card-desc">7.4V Nominal BAK 18650 Pack</text>
-    <text x="16" y="60" class="card-desc">I2C Real-Time Bus Power Sensing</text>
+  <g transform="translate(652, 250)">
+    <rect width="240" height="78" class="card-box" />
+    <rect width="240" height="22" class="card-header-bg" />
+    <text x="10" y="15" class="card-title">2S Li-Ion &amp; INA219 Monitor</text>
+    <text x="10" y="38" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>7.4V Nom BAK 18650 Pack (2600mAh)</text>
+    <text x="10" y="52" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>I2C Real-Time Bus Power Sensing</text>
+    <text x="10" y="66" class="card-spec"><tspan class="bullet-dot">&#8226; </tspan>Energy Gain Telemetry (eta_gain)</text>
   </g>
 
-  <!-- INTERCONNECT WIRES & LABELS -->
-  <!-- Col 1 to Col 2 -->
-  <path d="M 315 120 L 274 165" class="wire-line" marker-end="url(#arrow-blue)" />
-  <path d="M 315 240 L 274 265" class="wire-line" marker-end="url(#arrow-blue)" />
+  <!-- INTERCONNECT WIRES & BUS LABELS -->
+  <!-- Col 3 to Col 2 (Control & PWM, Gap 2 is 580..652, center=616) -->
+  <path d="M 652 185 L 616 185 L 616 138 L 580 138" class="wire-ctrl" marker-end="url(#arrow-slate)" />
+  <path d="M 652 205 L 616 205 L 616 264 L 580 264" class="wire-ctrl" marker-end="url(#arrow-slate)" />
 
-  <!-- Col 3 to Col 2 -->
-  <path d="M 605 165 L 555 125" class="wire-line" marker-end="url(#arrow-blue)" />
-  <path d="M 605 185 L 555 235" class="wire-line" marker-end="url(#arrow-blue)" />
+  <!-- Col 2 to Col 1 (Mechanical Couplings, Gap 1 is 268..340, center=304) -->
+  <path d="M 340 138 L 304 138 L 304 195 L 268 195" class="wire-mech" marker-end="url(#arrow-mech)" />
+  <path d="M 340 264 L 304 264 L 304 289 L 268 289" class="wire-mech" marker-end="url(#arrow-mech)" />
 
-  <!-- Col 3 Internal -->
-  <path d="M 730 120 L 730 140" class="wire-accent" marker-end="url(#arrow-green)" />
-  <path d="M 730 232 L 730 212" class="wire-pwr" marker-end="url(#arrow-amber)" />
+  <!-- Col 3 Internal Connections (ESP32 -> L298N, Battery -> L298N) -->
+  <path d="M 772 140 L 772 156" class="wire-ctrl" marker-end="url(#arrow-slate)" />
+  <path d="M 772 250 L 772 234" class="wire-pwr" marker-end="url(#arrow-pwr)" />
 
-  <!-- Flow badges -->
-  <rect x="238" y="12" width="130" height="18" class="badge-bg" />
-  <text x="303" y="24" class="badge-txt">1.2mm Contact Datum</text>
+  <!-- Flow badges centered cleanly in gaps -->
+  <rect x="272" y="214" width="64" height="16" rx="2" class="badge-bg" />
+  <text x="304" y="225" class="badge-txt">MECHANICAL</text>
 
-  <rect x="526" y="12" width="120" height="18" class="badge-bg" />
-  <text x="586" y="24" class="badge-txt">PWM / FSM Control</text>
+  <rect x="585" y="193" width="62" height="16" rx="2" class="badge-bg" />
+  <text x="616" y="204" class="badge-txt">DRIVE / PWM</text>
+
+  <!-- Bottom Metadata Bar -->
+  <line x1="28" y1="344" x2="892" y2="344" stroke="#22272e" stroke-width="1" />
+  <text x="28" y="358" class="tech-subtle">DATUM: Z = 0.00 MM // CONTACT DEPTH: 1.20 MM</text>
+  <text x="892" y="358" class="tech-subtle" text-anchor="end">SYSTEM TELEMETRY: REAL-TIME INA219 I2C BUS</text>
 </svg>
