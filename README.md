@@ -1,9 +1,8 @@
 <div align="center">
 
-<img src="web/assets/branding/01_aerospace_frame.svg" width="580" alt="Project A.R.C. System Logo" />
+<img src="web/assets/branding/01_horizontal_inline.svg" width="520" alt="Project A.R.C." />
 
-# Project A.R.C.
-### Autonomous Robotic Cleaner for Photovoltaic Modules & Precision Glass Testbeds
+<p><strong>Autonomous Robotic Cleaner for Photovoltaic Modules &amp; Precision Glass Testbeds</strong></p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 [![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)](cad/)
